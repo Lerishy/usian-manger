@@ -13,7 +13,16 @@ module.exports = defineConfig({
     // 是否开启https
     https: false,
     // 配置跨域
-   
+    proxy:{
+      //dev-api 代理名称
+      "/dev-api":{
+        //跨域的地址
+        target:"http://localhost:3000/",
+        changeOrigin:true,
+        //路径重写
+        
+      }
+    }
   },
   // 关闭eslint
   lintOnSave : false
